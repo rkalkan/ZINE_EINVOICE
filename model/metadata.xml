@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0"
+    xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+    xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+    xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="ZCRM_NUMUNE_SRV" xml:lang="tr" sap:schema-version="1"
+            xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="Header" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="CustomerKey"/>
+                    <PropertyRef Name="Guid"/>
+                    <PropertyRef Name="ObjectID"/>
+                </Key>
+                <Property Name="CustomerName" Type="Edm.String" Nullable="false" MaxLength="35" sap:label="Ad1/Soyad" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="CustomerKey" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Muhatap" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Guid" Type="Edm.Guid" Nullable="false" sap:label="Nesne GUID'i" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ObjectID" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="İşlem numarası" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Description" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Tanım" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="RelatedKey" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Muhatap" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="RelatedName" Type="Edm.String" Nullable="false" MaxLength="35" sap:label="Ad1/Soyad" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="BolgeKey" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Lower_value" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="BolgeName" Type="Edm.String" Nullable="false" MaxLength="60" sap:label="Kısa tanım" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="FromKey" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Lower_value" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="FromName" Type="Edm.String" Nullable="false" MaxLength="60" sap:label="Kısa tanım" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ToKey" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Lower_value" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ToName" Type="Edm.String" Nullable="false" MaxLength="60" sap:label="Kısa tanım" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="StatusKey" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Lower_value" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="StatusName" Type="Edm.String" Nullable="false" MaxLength="60" sap:label="Kısa tanım" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SampleType" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="Numune cinsi" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SampleNameCode" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="Numune adı/kodu" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SampleQuantity" Type="Edm.String" Nullable="false" MaxLength="7" sap:label="Numune miktarı" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SampleUnit" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Birim" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SampleBedelKey" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Lower_value" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SampleBedelName" Type="Edm.String" Nullable="false" MaxLength="60" sap:label="Kısa tanım" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="GonderimAmacKey" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Lower_value" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="GonderimAmacName" Type="Edm.String" Nullable="false" MaxLength="60" sap:label="Kısa tanım" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="GonderimSekli" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="Gönderim şekli" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="GonderimNo" Type="Edm.String" Nullable="false" MaxLength="15" sap:label="Gönderim no" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="GonderimDetay" Type="Edm.String" Nullable="false" MaxLength="60" sap:label="Gönderim detayı" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Adres" Type="Edm.String" Nullable="false" MaxLength="60" sap:label="Müşteri adresi" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Telefon" Type="Edm.String" Nullable="false" MaxLength="15" sap:label="Müşteri telefon no" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Email" Type="Edm.String" Nullable="false" MaxLength="60" sap:label="Müşteri e-mail" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="Customer" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="CustomerNo"/>
+                </Key>
+                <Property Name="CustomerNo" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Muhatap" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="CustomerName" Type="Edm.String" Nullable="false" MaxLength="80" sap:label="Char80" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="RelatedPerson" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="RelatedNo"/>
+                </Key>
+                <Property Name="RelatedNo" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Muhatap" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="RelatedName" Type="Edm.String" Nullable="false" MaxLength="80" sap:label="Char80" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="Region" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="RegionKey"/>
+                </Key>
+                <Property Name="RegionKey" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Lower_value" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="RegionName" Type="Edm.String" Nullable="false" MaxLength="60" sap:label="Kısa tanım" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="To" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Key"/>
+                </Key>
+                <Property Name="Key" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Lower_value" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Value" Type="Edm.String" Nullable="false" MaxLength="60" sap:label="Kısa tanım" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="Status" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Key"/>
+                </Key>
+                <Property Name="Key" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Lower_value" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Value" Type="Edm.String" Nullable="false" MaxLength="60" sap:label="Kısa tanım" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="NumuneBedel" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Key"/>
+                </Key>
+                <Property Name="Key" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Lower_value" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Value" Type="Edm.String" Nullable="false" MaxLength="60" sap:label="Kısa tanım" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="GonderimAmac" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Key"/>
+                </Key>
+                <Property Name="Key" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Lower_value" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Value" Type="Edm.String" Nullable="false" MaxLength="60" sap:label="Kısa tanım" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="From" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Key"/>
+                </Key>
+                <Property Name="Key" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Lower_value" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Value" Type="Edm.String" Nullable="false" MaxLength="60" sap:label="Kısa tanım" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityContainer Name="ZCRM_NUMUNE_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="HeaderSet" EntityType="ZCRM_NUMUNE_SRV.Header" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="CustomerSet" EntityType="ZCRM_NUMUNE_SRV.Customer" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="RelatedPersonSet" EntityType="ZCRM_NUMUNE_SRV.RelatedPerson" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="RegionSet" EntityType="ZCRM_NUMUNE_SRV.Region" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="ToSet" EntityType="ZCRM_NUMUNE_SRV.To" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="StatusSet" EntityType="ZCRM_NUMUNE_SRV.Status" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="NumuneBedelSet" EntityType="ZCRM_NUMUNE_SRV.NumuneBedel" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="GonderimAmacSet" EntityType="ZCRM_NUMUNE_SRV.GonderimAmac" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="FromSet" EntityType="ZCRM_NUMUNE_SRV.From" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+            </EntityContainer>
+            <atom:link rel="self" href="./sap/ZCRM_NUMUNE_SRV/$metadata"
+                xmlns:atom="http://www.w3.org/2005/Atom"/>
+                <atom:link rel="latest-version" href="./sap/ZCRM_NUMUNE_SRV/$metadata"
+                    xmlns:atom="http://www.w3.org/2005/Atom"/>
+                </Schema>
+            </edmx:DataServices>
+        </edmx:Edmx>
